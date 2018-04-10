@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abt.camera_control_view.MainActivity"
+    android:orientation="vertical" >
+
+    <com.abt.camera_control_view.CameraControlView
+        android:id="@+id/camera_control_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:background="#000000" />
+
+    <com.abt.camera_control_view.CameraSwitchView
+        android:id="@+id/custom_view_scrolling"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:background="#000000" />
+
+    <com.abt.camera_control_view.WeekChooseView
+        android:id="@+id/scroll_choose_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="50dp" />
+
+</LinearLayout>
