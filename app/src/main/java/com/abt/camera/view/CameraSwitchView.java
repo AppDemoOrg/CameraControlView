@@ -1,4 +1,4 @@
-package com.abt.camera;
+package com.abt.camera.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Scroller;
+
+import com.abt.camera.R;
 
 /**
  * @描述： @相机控制面板

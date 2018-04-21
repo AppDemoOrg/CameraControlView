@@ -6,25 +6,24 @@
     tools:context="com.abt.camera.MainActivity"
     android:orientation="vertical" >
 
-    <com.abt.camera.CameraControlView
+    <com.abt.camera.view.CameraControlView
         android:id="@+id/camera_control_view"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="50dp"
         android:background="#000000" />
 
-    <com.abt.camera.CameraSwitchView
-        android:id="@+id/custom_view_scrolling"
+    <com.abt.camera.view.CameraSwitchView
+        android:id="@+id/camera_switch_view"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="50dp"
         android:background="#000000" />
 
-    <com.abt.camera.WeekChooseView
-        android:id="@+id/scroll_choose_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
+    <com.abt.camera.view.WeekChooseView
+        android:id="@+id/week_choose_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:layout_marginTop="50dp" />
 
 </LinearLayout>

@@ -1,51 +1,46 @@
 package com.abt.camera;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+
+import com.abt.camera.view.CameraSwitchView;
+import com.abt.camera.view.WeekChooseView;
+import com.orhanobut.logger.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }*/
-
-    private static final String TAG = "MainActivity";
-    private CameraControlView mCameraControlView;
-    private CameraSwitchView mCustomViewScrolling;
-    private WeekChooseView mScrollChooseView;
-
-    // String mTitles[] = new String[] { "早餐前", "早餐后", "午餐前", "午餐后", "晚餐前", "晚餐后", "睡前" };
-    String mTitles[] = new String[] { "早餐前", "早餐后" };
-
-    private int picIds[] = new int[] {
-            R.mipmap.time_bg_breakfastbefore, R.mipmap.time_bg_breakfastafter
-    };
+    private CameraSwitchView mCameraSwitchView;
+    private WeekChooseView mWeekChooseView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //initCameraController();
+        initCameraSwitcher();
+        initWeekChooser();
+    }
 
-        mCustomViewScrolling = (CameraSwitchView) findViewById(R.id.custom_view_scrolling);
-        mCustomViewScrolling.setOnCheckListener(new CameraSwitchView.OnCheckListener() {
-            @Override
-            public void itemOnCheckListener(boolean videoChecked) {
-                Log.d(TAG, "itemOnCheckListener videoChecked = "+videoChecked);
-            }
-        });
-
-        mScrollChooseView = (WeekChooseView) findViewById(R.id.scroll_choose_view);
-        mScrollChooseView.setTitles(mTitles);
-        mScrollChooseView.setPicIds(picIds);
-        mScrollChooseView.setOnScrollEndListener(new WeekChooseView.OnScrollEndListener() {
+    private void initWeekChooser() {
+        mWeekChooseView = (WeekChooseView) findViewById(R.id.week_choose_view);
+        mWeekChooseView.setTitles(new String[]{"晚上", "早上"});
+        mWeekChooseView.setPicIds(new int[]{R.mipmap.time_bg_breakfastbefore, R.mipmap.time_bg_breakfastafter});
+        mWeekChooseView.setOnScrollEndListener(new WeekChooseView.OnScrollEndListener() {
             @Override
             public void currentPosition(int position) {
-                Log.d(TAG, "当前 position = " + position + " " + mTitles[position]);
+                Logger.d("当前 position = " + position);
             }
         });
-
     }
+
+    private void initCameraSwitcher() {
+        mCameraSwitchView = (CameraSwitchView) findViewById(R.id.camera_switch_view);
+        mCameraSwitchView.setOnCheckListener(new CameraSwitchView.OnCheckListener() {
+            @Override
+            public void itemOnCheckListener(boolean videoChecked) {
+                Logger.d("itemOnCheckListener videoChecked = " + videoChecked);
+            }
+        });
+    }
+
 }
