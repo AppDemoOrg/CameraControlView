@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CameraControlView.iml" filepath="$PROJECT_DIR$/CameraControlView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CameraControlView.iml" filepath="$PROJECT_DIR$/CameraControlView.iml" />
       <module fileurl="file://C:\Users\pisoft\AndroidStudioProjects\CameraControlView\Custom_View_Camera_Control.iml" filepath="C:\Users\pisoft\AndroidStudioProjects\CameraControlView\Custom_View_Camera_Control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

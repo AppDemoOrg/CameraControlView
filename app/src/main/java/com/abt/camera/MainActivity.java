@@ -1,4 +1,4 @@
-package com.abt.camera_control_view;
+package com.abt.camera;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.abt.camera_control_view;
+package com.abt.camera;
 
 import android.content.Context;
 import android.graphics.Canvas;
